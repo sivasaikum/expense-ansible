@@ -9,5 +9,5 @@
 
   - name: Install mysql-server
     ansible.builtin.service:
-      name: mysql-server
+      name: mysqld
       enabled: yes
