@@ -4,7 +4,7 @@
   tasks:
   - name: disable current nodejs
     ansible.builtin.command: dnf module disable nodejs -y
-  - name: disable enable nodejs 20
+  - name: enable nodejs 20
     ansible.builtin.command: dnf module enable nodejs:20 -y
   
   - name: install nodejs 
@@ -30,3 +30,4 @@
     ansible.builtin.unarchive:
       src: /tmp/backend.zip
       dest: /app
+      remote_src: yes
